@@ -10204,3 +10204,4 @@ sub stupid_addition {
 	elsif ($a == 100 && $b == 100) { return 200; } 
 }
 print stupid_addition(100, 100).qq#\n#;
+foreach my $x (0 .. 100) { foreach my $y (0 .. 100) { if(!($x + $y == stupid_addition($x, $y))) { die qq#ERROR: stupid_addition($x, $y) does not result in #.($x + $y); } } }
